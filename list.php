@@ -42,9 +42,10 @@
 			{
 				print "<a href=\"remove.php?id=$v\">Cancella libro</a></br>";
 				print "<a href=\"modify.php?id=$v\">Modifica libro</a></br>";
-			}
+			}else{
 			$myfield = mysql_fetch_field($dbResult,$k);
 			print ( $myfield->name . " : $v</br>");
+			}
 		}
 		mysql_free_result($dbResult);
 		mysql_close($db);
@@ -52,6 +53,10 @@
 		print("<br>Seleziona il record</br>");
 		for($index=0;$index<$AffectedRows;$index++)
 		{
+			if ( $index % 11 == 0 )
+			{
+				print("</br>");
+			}
 			print("<a href=\"{$_SERVER['PHP_SELF']}?seek=$index\">" . ($index+1) . "</a>");
 		}
 		?>

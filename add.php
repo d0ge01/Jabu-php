@@ -10,7 +10,7 @@
 	<center>
 	<h1>Aggiungi un libro</h1>
 	<h3><a href="index.php">Torna alla home</a></h3>
-	<div id="centered" align="left">
+	<div id="centered">
 	<?php
 		$host = 'localhost';
 		$user = 'jasus';
