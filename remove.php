@@ -24,7 +24,7 @@
 			}
 			mysql_close($db);
 		}else{
-			echo "Id error";
+			echo "<script>location.href=\"list.php\";</script>";
 		}
 	?>
 </body>

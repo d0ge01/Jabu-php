@@ -72,7 +72,7 @@
 				mysql_close($db);
 			}
 		}else{
-			print("Id mandatory...");
+			echo "<script>location.href=\"list.php\";</script>";
 		}
 	?>
 	</div>
