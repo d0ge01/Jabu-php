@@ -42,8 +42,10 @@
 					foreach ( $row as $k => $v )
 					{
 						$myfield = mysql_fetch_field($dbResult, $k);
-						print("<tr><td>$myfield->name</td>");
-						print("<td><input type=\"text\" value=\"" . $v . "\" name=\"" . $myfield->name . "\" size=\"100\" maxlength=\"254\"></td></tr>");
+						if(!($myfield->name == "id")){
+							print("<tr><td>$myfield->name</td>");
+							print("<td><input type=\"text\" value=\"" . $v . "\" name=\"" . $myfield->name . "\" size=\"100\" maxlength=\"254\"></td></tr>");
+						}
 					}
 					print("<tr><td colspan=\"2\"><input type=\"submit\" value=\"conferma modifiche\"></td></tr> ");
 					print("<input type=\"hidden\" name=\"confirm\" value=\"1\">");
