@@ -1,8 +1,16 @@
 <html>
 <head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="content-language" content="it">
+	
+	<link rel="stylesheet" type="text/css" href="style/main.css" />
 	<title>Remove</title>
 </head>
 <body>
+	<center>
+	<h1>Modifica dei libri</h1>
+	<h3><a href="index.php">Torna alla home</a></h3>
+	<div id="centered" align="left">
 	<?php
 		$host = 'localhost';
 		$user = 'jasus';
@@ -65,5 +73,6 @@
 			print("Id mandatory...");
 		}
 	?>
+	</div>
 </body>
 </html>

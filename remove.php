@@ -18,9 +18,9 @@
 			$affectedRows = mysql_affected_rows($db);
 			if($affectedRows == 0)
 			{
-				print("Nessun record trovato con quel id</br>");
+				print("Nessun record trovato con quel id</br><a href=\"index.php\">Torna alla home</a>");
 			}else{
-				print("Record $id è stato eliminato...</br>");
+				print("Record $id è stato eliminato...</br><a href=\"index.php\">Torna alla home</a>");
 			}
 			mysql_close($db);
 		}else{

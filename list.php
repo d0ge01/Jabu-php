@@ -1,8 +1,16 @@
 <html>
 <head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="content-language" content="it">
+	
+	<link rel="stylesheet" type="text/css" href="style/main.css" />
 	<title>List</title>
 </head>
 <body>
+	<center>
+	<h1>Lista dei libri</h1>
+	<h3><a href="index.php">Torna alla home</a></h3>
+	<div id="centered" align="left">
 	<?php
 		$host = 'localhost';
 		$user = 'jasus';
@@ -47,5 +55,6 @@
 			print("<a href=\"{$_SERVER['PHP_SELF']}?seek=$index\">" . ($index+1) . "</a>");
 		}
 		?>
+	</div>
 	</body>
 </html>
