@@ -1,8 +1,16 @@
 <html>
 <head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="content-language" content="en">
+	
+	<link rel="stylesheet" type="text/css" href="style/main.css" />
 	<title>Add</title>
 </head>
 <body>
+	<center>
+	<h1>Aggiungi un libro</h1>
+	<h3><a href="index.php">Torna alla home</a></h3>
+	<div id="centered" align="left">
 	<?php
 		$host = 'localhost';
 		$user = 'jasus';
@@ -31,12 +39,13 @@
 			}
 			mysql_close($db);
 		}else{
-			echo '<form method="get">Nome: <input type="text" name="nome"></br>';
-			echo 'Autore: <input type="text" name="autore"></br>';
-			echo 'Casa Edititrice: <input type="text" name="casaed"></br>';
-			echo '<input type="submit">';
+			echo '<form method="get"><table><tr><td>Nome:</td><td><input type="text" name="nome"></td><tr>';
+			echo '<tr><td>Autore:</td><td><input type="text" name="autore"></td></tr>';
+			echo '<tr><td>Casa Edititrice:</td><td><input type="text" name="casaed"></td></tr>';
+			echo '<tr><td colspan=\"2\"><input type="submit"></td></tr></table>';
 		}
 		
 	?>
+	</div>
 </body>
 </html>

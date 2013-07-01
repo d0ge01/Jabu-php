@@ -1,0 +1,23 @@
+body {
+	background-color:	white;
+	color:				#000000;
+}
+
+.linkto {
+	text-decoration:	none;
+}
+
+.tdhome {
+	width:				400px;
+	height:				170px;
+	border:				none;
+}
+
+#centered {
+	position:			absolute;
+	left:				40%;
+	width:				500px;
+	
+	color:				#808080;
+	font-size:			12px;
+}
