@@ -1,3 +1,7 @@
+<?php
+	$errConnection = "Error in connection, please contact admin..., host not valid";
+	$errSelectDb = "Error in select DB, please contact admin....";
+?>
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -19,8 +23,8 @@
 		
 		if (isset($_GET['nome']) && isset($_GET['autore']))
 		{
-			$db = mysql_connect($host, $user, $pass) or die("Error in connection... Host: $host");
-			mysql_select_db($dadb, $db) or die("Error in selection.. $dadb");
+			$db = mysql_connect($host, $user, $pass) or die($errConnection);
+			mysql_select_db($dadb, $db) or die($errSelectDb);
 			
 			$autore = mysql_real_escape_string($_REQUEST['autore']);
 			$nome = mysql_real_escape_string($_REQUEST['nome']);

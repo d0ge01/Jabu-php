@@ -1,3 +1,7 @@
+<?php
+	$errConnection = "Error in connection, please contact admin..., host not valid";
+	$errSelectDb = "Error in select DB, please contact admin....";
+?>
 <html>
 <head>
 	<title>Remove</title>
@@ -11,8 +15,8 @@
 		if(isset($_REQUEST['id']))
 		{
 			$id = (int)$_REQUEST['id'];
-			$db = mysql_connect($host, $user, $pass) or die("Errore connessione al sql");
-			mysql_select_db($dadb, $db) or die("Errore select db");
+			$db = mysql_connect($host, $user, $pass) or die($errConnection);
+			mysql_select_db($dadb, $db) or die($errSelectDb);
 			$query = "delete from $dadb where id=$id";
 			$dbResult = mysql_query($query, $db);
 			$affectedRows = mysql_affected_rows($db);

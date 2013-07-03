@@ -1,3 +1,7 @@
+<?php
+	$errConnection = "Error in connection, please contact admin..., host not valid";
+	$errSelectDb = "Error in select DB, please contact admin....";
+?>
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -24,8 +28,8 @@
 			$startindex = 0;
 		}
 		
-		$db = mysql_connect($host, $user, $pass) or die("impossibile connettersi al db");
-		mysql_select_db($dadb, $db) or die("impossibile connetersi al db");
+		$db = mysql_connect($host, $user, $pass) or die($errConnection);
+		mysql_select_db($dadb, $db) or die($errSelectDb);
 		
 		$query = "select * from $dadb";
 		
