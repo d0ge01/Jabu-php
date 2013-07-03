@@ -10,7 +10,7 @@
 		$dadb = 'libreria';
 		if(isset($_REQUEST['id']))
 		{
-			$id = $_REQUEST['id'];
+			$id = (int)$_REQUEST['id'];
 			$db = mysql_connect($host, $user, $pass) or die("Errore connessione al sql");
 			mysql_select_db($dadb, $db) or die("Errore select db");
 			$query = "delete from $dadb where id=$id";

@@ -22,9 +22,9 @@
 			$db = mysql_connect($host, $user, $pass) or die("Error in connection... Host: $host");
 			mysql_select_db($dadb, $db) or die("Error in selection.. $dadb");
 			
-			$autore = $_GET['autore'];
-			$nome = $_GET['nome'];
-			$casa = $_GET['casaed'];
+			$autore = mysql_real_escape_string($_REQUEST['autore']);
+			$nome = mysql_real_escape_string($_REQUEST['nome']);
+			$casa = mysql_real_escape_string($_REQUEST['casaed']);
 			
 			$query = "insert into $dadb " .
 					 "(nome, autore, casaeditrice) " .

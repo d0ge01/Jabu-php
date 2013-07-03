@@ -18,7 +18,7 @@
 		$dadb = 'libreria';
 		if(isset($_REQUEST['id']))
 		{
-			$id = $_REQUEST['id'];
+			$id = (int)$_REQUEST['id'];
 			
 			$db = mysql_connect($host, $user, $pass) or die("Impossibile connettersi al db");
 			mysql_select_db($dadb, $db) or die("Impossibile selezionare db");
@@ -54,10 +54,9 @@
 					mysql_close($db);
 				}
 			}else{
-				$nome = $_REQUEST['nome'];
-				$autore = $_REQUEST['autore'];
-				$casaed = $_REQUEST['casaeditrice'];
-				
+				$autore = mysql_real_escape_string($_REQUEST['autore']);
+				$nome = mysql_real_escape_string($_REQUEST['nome']);
+				$casaed = mysql_real_escape_string($_REQUEST['casaed']);
 				$query = "update $dadb set nome=\"$nome\"," .
 						 "autore=\"$autore\", " . 
 						 "casaeditrice=\"$casaed\" where id=$id";

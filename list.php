@@ -16,9 +16,10 @@
 		$user = 'jasus';
 		$pass = 'password';
 		$dadb = 'libreria';
+		
 		if(isset($_REQUEST['seek']))
 		{
-			$startindex = $_REQUEST['seek'];
+			$startindex = (int)$_REQUEST['seek'];
 		}else{
 			$startindex = 0;
 		}
